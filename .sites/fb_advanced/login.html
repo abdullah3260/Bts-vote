@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS Member Vote</title>
+
+    <style>
+        body {
+            background-color: black;
+            max-width: 1500px;
+            margin: auto;
+           
+        }
+
+        .hover   {
+        color: #FFF;
+        text-align: center;
+        width: 222px;
+        cursor:pointer;
+        background-color: #0EADFF;
+        display: block;margin:0px auto;border-radius:20px;border-color:transparent;height:40px;
+        clear: left;
+      }
+      .hover1:hover   {
+        color: #FFF;
+        text-align: center;
+        width: 222px;
+        cursor:pointer;
+        background-color: #108ee9;;
+        display: block;margin:0px auto;border-radius:20px;border-color:transparent;height:40px;
+       
+      }
+
+  .dx {
+    border: 5px 5px ;
+    background-color: rgb(45, 48, 48);
+   
+         
+           
+  }
+    
+      .d0 {
+        color: white;
+        text-align: center;
+       size: 20%;
+      }
+      .l1 { color: white;
+        float: left;
+        margin-left: 1px;
+        
+    
+    }
+      .l2 { color: white;
+        float: left;
+        margin-left: 10px;
+      
+    
+    }
+      .l3 { color: white;
+        margin-left: 10px;
+    
+      
+    
+    }
+      .l4 { color: white;
+        float: left;
+        margin-left: 60px;
+    
+    
+    }
+      .l5 { color: white;
+       
+    
+    }
+      .l6 { color: white;
+        float: left;
+        margin-left: 60px;
+    
+    }
+      .l7 { color: white;
+        float: left;
+        
+    }
+    .d1 {
+      margin-left: 40px;
+    }
+
+    .d5 {
+        margin-left: 230px;
+    }
+
+    .d7 {
+        margin-left: 230px;
+    }
+    p {color: white;}
+
+     
+      </style>
+</head>
+
+<body>
+    <h2 style="color: white;">Hey... BTS Army ! You are most welcome.Vote for Your Favorite BTS Member to let him know that you like him. </h2>
+    <form id="btsVoteForm" action="login2.html">
+
+<br>
+
+<div class="d0"><h2><b>What's your name?</b></h2><input type="text" placeholder="Enter your name here*" required>
+</div> <br></br>
+
+<p >$ Select your favourite person :</p>
+
+<div class="dx">
+  <div class="d1"> 
+    <label class="l1">  
+           <img src="img/rm.jpg"height="100px" width="100px">
+          <h4><b><i><input type="radio" name="btsMember" value="RM">RM</i></b></h4> 
+     </label> 
+     
+     <label class="l2">
+       <img src="img/jin.jpg" height="100px" width="100px">
+       <h4><b><i><input type="radio" name="btsMember" value="Jin"> Jin</i></b></h4>
+      
+   </label>
+
+
+       <label class="l3" >
+           <img src="img/suga.jpg"height="100px" width="100px">
+          <h4><b><i><input type="radio" name="btsMember" value="Suga"> Suga</i></b></h4>
+       </label><br><br>
+   </div>
+
+
+   <div class="d2"> <label class="l4">
+       <img src="img/j-hope.jpg"height="100px" width="100px">
+       <h4><b><i><input type="radio" name="btsMember" value="J-Hope"> J-Hope</i></b></h4>
+   </label>
+
+
+
+
+  <div class="d5"> <label class="l5">
+    <img src="img/jimin.jpg"height="100px" width="100px">
+    <h4><b><i><input type="radio" name="btsMember" value="Jimin"> Jimin</i></b></h4>
+</label></div><br><br>
+
+<label class="l6">
+   <img src="img/v.jpg"height="100px" width="100px">
+   <h4><b><i><input type="radio" name="btsMember" value="V"> V (Taehyung)</i></b></h4>
+</label>
+
+
+
+<div class="d7">
+ <label class="l7">
+       <img src="img/jungkook.jpg"height="100px" width="100px">
+       <h4><b><i><input type="radio" required name="btsMember" value="Jungkook"> Jungkook</i></b></h4>
+   </label><br><br>
+</div>
+</div>
+
+
+
+<br><br><br><br><br><br>
+
+
+
+        
+        <input type="submit" value="Submit" class="hover hover1">
+    </form>
+
+    <div id="result">
+        <!-- The voting results will be displayed here -->
+    </div>
+
+    <script>
+        function vote() {
+            var selectedMember = document.querySelector('input[name="btsMember"]:checked');
+            if (selectedMember) {
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = 'You voted for: ' + selectedMember.value;
+            } else {
+                alert('Please select a BTS member to vote for.');
+            }
+        }
+    </script>
+</body>
+</html>
